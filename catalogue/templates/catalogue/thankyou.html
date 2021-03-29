@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="align-center">
+    <h2 class="align-center">Thank you very much!</h2>
+
+    <p class="align-center">Please help us spread the word and encourage your friends and colleagues to
+    get listed. Thank you!</p>
+
+
+<a href="{% url 'catalogue:page_list' %}" class="btn btn-secondary">Explore Small Business</a>
+
+<a href="{% url 'catalogue:list_new' %}" class="btn btn-secondary"> Add another page/website</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>New Listing</h2>
+<div class ="form-group">
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-primary">Submit</button>
+    </form>
+
+</div>
+{% endblock %}

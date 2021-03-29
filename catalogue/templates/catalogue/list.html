@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div>
+
+<div id="sidebar">
+    <h3>Categories</h3>
+    <ul>
+        <li {% if not category %}class="selected"{% endif %}>
+            <a href="{% url "catalogue:page_list" %}">All</a>
+        </li>
+        {% for c in categories %}
+        <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+            <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<div id="main">
+
+    <h2>{% if category %}{{ category.name }}{% else %}
+        All pages
+        {% endif %}</h2>
+
+    <div class="input-group justify-content-center">
+        <form  class="form-inline my-lg-0 my-2" action="{% url 'catalogue:page_list' %}">
+            <input type="search" name ="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                   aria-describedby="search-addon" />
+            <button type="submit" class="btn btn-outline-primary">search</button>
+        </form>
+    </div>
+
+        <div class="col-md-12">
+        <div class="row">
+       {% for page in pages %}
+       <div class="p-4 cold-md-4">
+           <div class="card" style="width: 18rem;">
+               <img  src="{% if page.image %}{{ page.image}}{% else %}{% static "images/no_image.png" %}{% endif %}"
+                    class="card-img-top" alt="{{ page.name }}">
+               <div class="card-body">
+                   <h5 class="card-title">{{ page.name }}</h5>
+                   <p class="card-text">{{page.description}}</p>
+                   <a href="{{ page.image }}" class="btn btn-primary" target="_blank">Vist website/page</a>
+               </div>
+           </div>
+       </div>
+       {% endfor %}
+        </div>
+        </div>
+
+   <hr>
+
+
+   <div class="row text-center">
+       <div class="col-lg-12">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item {% if not previous_page_url %} disabled {% endif %}">
+                <a class="page-link" href="{{previous_page_url}}"
+                   tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            {% for n in pages.paginator.page_range %}
+            {% if pages.number == n %}
+            <li class="page-item active" aria-current="page">
+                <span class="page-link">{{n }}</span>
+            </li>
+            {% elif n > pages.number|add:-3 and n < pages.number|add:3  %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ n }}">{{n}}
+                </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+            <li class="page-item {% if not next_page_url %} disabled {% endif %}">
+                <a class="page-link" href="{{ next_page_url }}">Next</a>
+            </li>
+        </ul>
+    </nav>
+       </div>
+   </div>
+</div>
+
+</div>
+{% endblock %}

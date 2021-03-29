@@ -1,0 +1,21 @@
+.aboutUs{
+    padding:40px 0 0;
+    background: #F0F8FF;
+    color: #000;
+}
+.aboutUs h2, .aboutUs h4{
+    color:#000;
+    line-height: 24px;
+}
+.aboutUs .row{
+    margin-bottom: 0px;
+
+}
+
+.aligncenter{
+	  text-align:center;
+}
+
+.aligncenter span{
+	  margin-left:0;
+}

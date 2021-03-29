@@ -1,0 +1,89 @@
+.section-header {
+    margin-bottom: 50px;
+}
+.section-header p{
+    text-align:center;
+}
+.section-header .section-title {
+    font-size: 44px;
+    color: #BCB8B1;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 0 20px;
+    display: block;
+    text-align: center;
+}
+.section-header .section-title:before {
+    content: "";
+    position: absolute;
+    width: 140px;
+    bottom: -5px;
+    right: 0;
+    width: 60px;
+    background: rgb(224, 175, 160);
+    /* border-radius: 50%; */
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    height: 6px;
+    border-bottom: 3px solid #F4F3EE;
+}
+
+
+#our-team {
+    padding: 100px 0;
+}
+#our-team .team-member {
+    padding: 0;
+}
+#our-team .team-member .team-img {
+    margin: 0;
+}
+#our-team .team-member .team-info {
+    background: #98DC95;
+    color: #3B8838;
+    padding: 7px 0;
+    border-top: 2px solid #fff;
+}
+#our-team .team-member:hover .social-icons > li > a {
+    color: #3B8818;
+}
+
+#our-team .social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    -webkit-transition: height 1s; /* For Safari 3.1 to 6.0 */
+    transition: height 1s;
+    background: #FFFFFF;
+    padding: 6px 0 6px;
+}
+#our-team .social-icons > li {
+    display: inline-block;
+}
+#our-team .social-icons > li > a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #3B8838;
+    background: transparent;
+    border-radius: 3px;
+    border: 1px solid #3B8838;
+    margin: 5px 10px;
+}
+
+
+#card-about {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+#about-anchor {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}

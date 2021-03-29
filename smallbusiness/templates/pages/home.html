@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container aboutUs" style="display:inline-block;">
+		<div class="row">
+			  <div class="col-md-12">
+				    <div class="aligncenter"><h2 class="aligncenter">Welcome to Small Business!</h2>
+                </div>
+				    <br/>
+			  </div>
+		</div>
+		<div class="row">
+				<div class="col-md-6">
+						<img width="400" height="600" src="{% static 'images/DSC_0099.JPG' %}" alt="">
+						<div class="space"></div>
+				</div>
+				<div class="col-md-6">
+						<p><h5>Searching for services on instagram is a time consuming manual activity and also not everyone is able to find/browse all the instagram pages doing small business.</h5></p>
+            <br> <br>
+
+						<ul class="list-unstyled">
+								<li><i class="fa fa-arrow-circle-right pr-10 colored"></i> List your business for FREE</li>
+                <br>
+								<li><i class="fa fa-arrow-circle-right pr-10 colored"></i> Browse small businesses available</li>
+                <br>
+								<li><i class="fa fa-arrow-circle-right pr-10 colored"></i> Help small businesses by listing them and gain potential customers</li>
+                <br>
+
+						</ul>
+            <a href="{% url 'catalogue:page_list' %}" class="btn btn-primary">Explore Small Business</a>
+				</div>
+				</div>
+
+	  </div>
+    <footer id="footer">Copyright &copy; 2021  Dhiren Serai
+        <p style="text-align: center;">Powered by
+            <a href="https://www.djangoproject.com/">Django</a></p>
+    </footer>
+
+
+
+{% endblock %}

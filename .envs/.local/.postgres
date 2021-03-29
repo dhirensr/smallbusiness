@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=smallbusiness
+POSTGRES_USER=oTWNKMkHwROOQviEEJeBIzdYSTxvXEUf
+POSTGRES_PASSWORD=e3NZA4RG8nGoPWlMWteLLOap2QixBxxRnoUQ3dKHHvjwiyBSsPmXOSOQMrAG3vpv
